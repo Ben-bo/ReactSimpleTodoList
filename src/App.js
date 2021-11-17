@@ -1,7 +1,15 @@
 import "./App.css";
-import { Todo } from "./todo/Todo";
+import Todo from "./component/todo/Todo";
+import Navbar from "./component/navbar/Navbar";
 const App = () => {
-  return <div className="App">{<Todo />}</div>;
+  return (
+    <>
+      <Navbar />
+      <div className="App">
+        <Todo />
+      </div>
+    </>
+  );
 };
 
 export default App;
