@@ -2,10 +2,9 @@ const jumbotron = () => {
   return (
     <div className="container-fluid">
       <div className="bg-light p-5 rounded-lg m-3 shadow-sm p-3 ">
-        <h1 className="display-4">Hello, world!</h1>
+        <h1 className="display-4">Hello, Welcome!</h1>
         <p className="lead">
-          This is a simple hero unit, a simple jumbotron-style component for
-          calling extra attention to featured content or information.
+          in this web you can create your todo list, list todo and dont forget
         </p>
         <hr className="my-4" />
         <p>

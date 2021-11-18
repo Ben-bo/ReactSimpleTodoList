@@ -3,7 +3,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-success">
       <div className="container">
         <a className="navbar-brand" href="/#">
-          Navbar
+          TodoLIST
         </a>
         <button
           className="navbar-toggler"
