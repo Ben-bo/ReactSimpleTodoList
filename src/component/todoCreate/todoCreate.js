@@ -1,32 +1,43 @@
 import "./todoCreate.css";
-const create = () => {
+import { useState } from "react";
+const Create = (props) => {
+  const [getInput, setInput] = useState("");
+  const formHandler = (event) => {
+    setInput(event.target.value);
+    console.log(getInput);
+  };
+  let handler = (event) => {
+    event.preventDefault();
+    const newData = {
+      id: Math.floor(Math.random() * 100) + 1,
+      title: getInput,
+    };
+
+    props.createFunct(newData);
+  };
   return (
-    <div>
+    <form onSubmit={handler}>
       <h3> Form Input</h3>
       <hr />
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">
-          Email address
+          New Todo
         </label>
         <input
-          type="email"
+          onChange={formHandler}
+          type="text"
           class="form-control"
           id="exampleFormControlInput1"
-          placeholder="name@example.com"
+          placeholder="input todo here ..."
         />
       </div>
       <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">
-          Example textarea
-        </label>
-        <textarea
-          class="form-control"
-          id="exampleFormControlTextarea1"
-          rows="3"
-        ></textarea>
+        <button type="submit" className="btn btn-success">
+          Save
+        </button>
       </div>
-    </div>
+    </form>
   );
 };
 
-export default create;
+export default Create;
