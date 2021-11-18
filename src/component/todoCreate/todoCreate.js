@@ -14,6 +14,7 @@ const Create = (props) => {
     };
 
     props.createFunct(newData);
+    setInput("");
   };
   return (
     <form onSubmit={handler}>
@@ -29,6 +30,7 @@ const Create = (props) => {
           class="form-control"
           id="exampleFormControlInput1"
           placeholder="input todo here ..."
+          value={getInput}
         />
       </div>
       <div class="mb-3">
