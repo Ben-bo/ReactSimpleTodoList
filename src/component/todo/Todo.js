@@ -1,4 +1,3 @@
-import "./Todo.css";
 import TodoList from "../todoList/TodoList";
 
 const Todo = () => {
@@ -10,6 +9,7 @@ const Todo = () => {
   return (
     <div>
       <h3> Todo List</h3>
+      <hr />
       <TodoList dataTodo={todoList} />
     </div>
   );

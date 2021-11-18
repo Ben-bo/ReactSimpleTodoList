@@ -1,10 +1,13 @@
-import "./TodoList.css";
 const TodoList = (props) => {
   const data = props.dataTodo;
   return (
-    <ul className="tdl">
+    <ul className="list-group">
       {data.map((result) => {
-        return <li key={result.id}>{result.title}</li>;
+        return (
+          <li className="list-group-item" key={result.id}>
+            {result.title}
+          </li>
+        );
       })}
     </ul>
   );
